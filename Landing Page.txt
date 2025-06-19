@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elapha: Your Trusted Path to Accessible & Verified Healthcare in SA</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fbfd; /* Light background for overall page */
+            color: #333;
+        }
+        /* Custom text color to match logo's dark grey */
+        .text-elapha-dark {
+            color: #212121; /* Dark grey from logo */
+        }
+        /* Primary button, now matching logo's yellow */
+        .btn-primary {
+            background-color: #FFD700; /* Yellow from logo */
+            color: #212121; /* Dark grey text to contrast with yellow button */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #FFC107; /* Slightly darker yellow on hover */
+        }
+        /* Secondary button, now matching logo's dark grey */
+        .btn-secondary {
+            background-color: #212121; /* Dark grey from logo */
+            color: white; /* White text to contrast with dark grey button */
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #333333; /* Slightly lighter dark grey on hover */
+        }
+        /* Waitlist button, matching logo's yellow */
+        .btn-waitlist {
+             background-color: #FFD700; /* Yellow from logo */
+             color: #212121; /* Dark grey text to contrast with yellow button */
+             padding: 1rem 2.5rem;
+             border-radius: 0.75rem;
+             font-weight: 700;
+             font-size: 1.125rem; /* text-lg */
+             box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); /* Yellow shadow */
+             transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-waitlist:hover {
+             background-color: #FFC107; /* Slightly darker yellow on hover */
+             transform: translateY(-2px);
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+        }
+        .pricing-table-header {
+            background-color: #FFD700; /* Yellow background for pricing headers */
+            color: #212121; /* Dark grey text for contrast */
+            font-weight: 600;
+            padding: 0.75rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            text-align: center;
+        }
+        .pricing-table-cell {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .pricing-table-row:last-child .pricing-table-cell {
+            border-bottom: none;
+        }
+        /* Keeping check/x icons universal for clarity */
+        .icon-check { color: #4CAF50; } 
+        .icon-x { color: #EF5350; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm py-4 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo - now using an image tag with a placeholder URL -->
+            <a href="#" class="flex-shrink-0">
+                <img src="logo-png Elapha" alt="Elapha Logo" class="h-8 sm:h-10">
+            </a>
+            <!-- Nav Items -->
+            <div class="space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 font-medium">About</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 font-medium">How It Works</a>
+                <a href="#waitlist" class="text-gray-600 hover:text-gray-900 font-medium">Join Waitlist</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-yellow-50 to-gray-100 py-16 sm:py-20 lg:py-24 text-center px-4 overflow-hidden relative">
+        <div class="max-w-5xl mx-auto z-10 relative">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-elapha-dark">
+                Your Trusted Path to Accessible & Verified Healthcare in South Africa.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                Tired of long queues and unreliable health info? Elapha connects you directly with <strong class="font-semibold text-elapha-dark">HPCSA-verified healthcare professionals</strong> for convenient consultations and a community built on credible insights. Your health journey, simplified and secure.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <!-- Patient button - now yellow with dark text -->
+                <a href="#patient-section" class="btn-primary inline-block text-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    I'M A PATIENT - Find Care
+                </a>
+                <!-- HCP button - now dark grey with white text -->
+                <a href="#hcp-section" class="btn-secondary inline-block text-lg shadow-md hover:shadow-lg transition-all duration-300">
+                    I'M A HEALTHCARE PROFESSIONAL - Grow My Practice
+                </a>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">Launching Soon across South Africa! Proudly POPIA Compliant.</p>
+        </div>
+        <!-- Background graphics - abstract shapes for visual interest, adjusted colors -->
+        <div class="absolute -top-10 -left-10 w-48 h-48 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-gray-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+    </header>
+
+    <!-- The Problem Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Healthcare Should Be Simple. Not Stressful.</h2>
+            <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+                In South Africa, accessing timely and trustworthy healthcare can be a challenge. Long waiting times, transport costs, and the uncertainty of finding credible health information online are real frustrations. You deserve better.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card flex flex-col items-center">
+                    <img src="Blurred People" alt="Clock icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Endless Waiting?</h3>
+                    <p class="text-gray-600">Avoid long queues and wasted time at clinics.</p>
+                </div>
+                <div class="card flex flex-col items-center">
+                    <img src="Traffic Jam Jozi" alt="Map icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Travel Hassles?</h3>
+                    <p class="text-gray-600">No more commuting for medical consultations.</p>
+                </div>
+                <div class="card flex flex-col items-center">
+                    <img src="Generic Search Results" alt="Question mark icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Unsure Who to Trust Online?</h3>
+                    <p class="text-gray-600">Separate reliable info from questionable sources.</p>
+                </div>
+                <div class="card flex flex-col items-center">
+                    <img src="Empty Wallet" alt="Money icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Healthcare Costs Too High?</h3>
+                    <p class="text-gray-600">Access affordable, tiered healthcare solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introducing Elapha: Your Solution -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-yellow-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Elapha: Verified Care. Connected Community. Your Health, Empowered.</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+                Elapha is building the future of health in South Africa – a secure, user-friendly platform designed for *you*. We’re bringing together <strong class="font-semibold text-elapha-dark">HPCSA-verified healthcare professionals</strong> and individuals like you, creating a space where reliable medical advice, convenient consultations, and a supportive health community are just a tap away.
+            </p>
+        </div>
+    </section>
+
+    <!-- How Elapha Empowers You (Benefits & Features – Tiered Value) -->
+    <section id="how-it-works" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">How Elapha Empowers You</h2>
+
+            <!-- A. Trust You Can See: Verified Professionals -->
+            <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Connect with Confidence. Always Verified.</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        No more guessing. Every doctor, specialist, and healthcare professional on Elapha undergoes a rigorous, multi-step verification process to confirm their credentials and HPCSA registration.
+                    </p>
+                    <p class="text-lg text-gray-700 font-semibold">
+                        Look for our distinctive <strong class="text-elapha-dark">'Verified Badge'</strong> – it's your promise of credible, professional care.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="HCP Verified Profile" alt="HCP Profile with Verified Badge" class="rounded-lg shadow-lg w-full max-w-md">
+                </div>
+            </div>
+
+            <!-- B. Your Health Community: Learn & Engage -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Knowledge is Power. Conversation is Key.</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Elapha is more than just appointments; it's a living hub of health insights.
+                    </p>
+                    <ul class="text-lg text-gray-700 space-y-3">
+                        <li class="flex items-start">
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Free Tier:</span> Browse and read daily articles, health tips, and Q&As directly from verified medical experts. 'Like' posts to show appreciation and stay informed, all at no cost.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Basic Tier (Paid - Affordable!):</span> Ready to dive deeper? Upgrade to our Basic tier to <strong class="text-elapha-dark">comment directly on posts</strong>, ask your questions, and participate in discussions with verified HCPs. Get limited direct messaging for non-urgent queries and build a supportive patient-to-patient network. Engage, don't just consume!
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="Social Feed" alt="Social Feed with Comments" class="rounded-lg shadow-lg w-full max-w-md">
+                </div>
+            </div>
+
+            <!-- C. Convenient Consultations: Care on Your Terms -->
+            <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Quality Care. Without the Wait.</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        When you need direct medical advice, Elapha makes it seamless. Our platform offers secure, high-quality video consultations with verified professionals.
+                    </p>
+                    <ul class="text-lg text-gray-700 space-y-3">
+                        <li class="flex items-start">
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Standard Tier (Paid):</span> Get discounted rates on virtual consultations and enjoy priority booking.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Premium Tier (Paid):</span> For comprehensive needs, our Premium tier offers included consultations each month/quarter, dedicated patient support, and early access to new features. Your health, truly prioritized.
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="verfied Shield Badge" alt="Video Consultation Mockup" class="rounded-lg shadow-lg w-full max-w-md">
+                </div>
+            </div>
+
+            <!-- D. Privacy & Security: Your Data, Protected -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-8">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Your Health Data. Secure & Private.</h3>
+                    <p class="text-lg text-gray-700">
+                        We understand the sensitivity of your health information. Elapha is built with robust security measures, including advanced encryption and strict access controls, to ensure your data is always protected and compliant with South Africa's POPIA. Your trust is our priority.
+                    </p>
+                    <div class="mt-4 flex items-center justify-start gap-4 text-gray-600">
+                        <img src="Data Protection" alt="Lock icon" class="w-16 h-16 rounded-lg">
+                        <span class="text-xl font-semibold text-elapha-dark">POPIA Compliant</span>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="Lock Pin icon" alt="Security Graphic" class="rounded-lg shadow-lg w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Elapha Experience: Simple Steps -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-yellow-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Your Journey to Better Health in 3 Simple Steps.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card flex flex-col items-center">
+                    <img src="Sign Up Icon" alt="Rocket icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">1. Join Our Waitlist</h3>
+                    <p class="text-gray-600">Sign up now to be among the first to experience Elapha's innovative platform. It’s quick and easy!</p>
+                </div>
+                <div class="card flex flex-col items-center">
+                    <img src="Health Knowledge Book" alt="Book icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">2. Explore & Engage</h3>
+                    <p class="text-gray-600">Once launched, create your profile and start browsing verified HCPs and their valuable health content. Choose your tier to unlock commenting and direct messaging.</p>
+                </div>
+                <div class="card flex flex-col items-center">
+                    <img src="Video Consultation" alt="Handshake icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">3. Connect & Consult</h3>
+                    <p class="text-gray-600">Schedule secure virtual consultations when you need direct medical advice, experiencing healthcare on your terms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Choose Your Health Journey: Our Affordable Plans (Pricing Snapshot) -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Accessible Health, Tailored for You.</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
+                Elapha offers flexible plans to fit your needs and budget. Start Free, then upgrade for more interaction and consultation benefits.
+            </p>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-gray-100 text-gray-700">
+                            <th class="py-3 px-4 text-left font-semibold">TIER</th>
+                            <th class="py-3 px-4 pricing-table-header">FREE (Elapha Explorer)</th>
+                            <th class="py-3 px-4 pricing-table-header">BASIC (Elapha Engager)</th>
+                            <th class="py-3 px-4 pricing-table-header">STANDARD (Elapha Consultant)</th>
+                            <th class="py-3 px-4 pricing-table-header">PREMIUM (Elapha Comprehensive)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Monthly Price</td>
+                            <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R0 (Forever Free!)</td>
+                            <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R99 / month</td>
+                            <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R249 / month</td>
+                            <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R499 / month</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">HCP Profiles</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Public Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Post Reactions</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Commenting</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Comment on HCP Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Comment on HCP Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Comment on HCP Posts</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Direct Message</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Limited DM to HCPs</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Unlimited DM to HCPs</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Unlimited DM to HCPs</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Consultations</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Discounted Virtual Calls</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> [X] Free Consults/Month</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Booking</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Priority Booking</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Priority Booking</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Support</td>
+                            <td class="py-3 px-4 pricing-table-cell">Basic</td>
+                            <td class="py-3 px-4 pricing-table-cell">Basic</td>
+                            <td class="py-3 px-4 pricing-table-cell">Standard</td>
+                            <td class="py-3 px-4 pricing-table-cell">Dedicated Patient Coordinator</td>
+                        </tr>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Other</td>
+                            <td class="py-3 px-4 pricing-table-cell">Basic Health Resources</td>
+                            <td class="py-3 px-4 pricing-table-cell">Ad-Free Experience, Patient Network</td>
+                            <td class="py-3 px-4 pricing-table-cell">Enhanced Records</td>
+                            <td class="py-3 px-4 pricing-table-cell">Early Feature Access, Family Plan Option</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Patient Waitlist Section -->
+    <section id="patient-section" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-50 to-gray-50">
+        <div class="max-w-3xl mx-auto text-center card p-6 sm:p-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">For Patients: Be First. Be Empowered. Be Elapha.</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Join our waitlist now to get **exclusive launch offers**, behind-the-scenes updates, and be among the first to access verified healthcare professionals and a thriving health community.
+            </p>
+ <!-- Netlify Form for Patient Waitlist -->
+            <form name="patient-waitlist" method="POST" data-netlify="true" class="space-y-4">
+                <!-- Netlify Honeypot for spam prevention -->
+                <input type="hidden" name="form-name" value="patient-waitlist">
+                <input type="hidden" name="bot-field">
+
+                <input type="email" name="email" placeholder="Your Email Address" required
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
+                       aria-label="Email address for waitlist">
+                <button type="submit" class="btn-waitlist w-full sm:w-auto">                    
+                    JOIN THE PATIENT WAITLIST NOW!
+                </button>
+            </form>
+            <p class="text-sm text-gray-500 mt-4">We respect your privacy. Your email will only be used for Elapha updates.</p>
+        </div>
+    </section>
+
+    <!-- HCP Registration Section -->
+    <section id="hcp-section" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-yellow-50">
+        <div class="max-w-3xl mx-auto text-center card p-6 sm:p-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">For Healthcare Professionals: Transform Your Practice.</h2>
+            <p class="text-lg text-gray-700 mb-8">
+                Elapha offers a secure, compliant platform to expand your patient reach, elevate your professional presence, and connect with peers. Be among the first to offer verified telehealth services in South Africa.
+            </p>
+ <!-- Netlify Form for HCP Registration -->
+            <form name="hcp-registration" method="POST" data-netlify="true" class="space-y-4">
+                <!-- Netlify Honeypot for spam prevention -->
+                <input type="hidden" name="form-name" value="hcp-registration">
+                <input type="hidden" name="bot-field">
+
+                <input type="text" name="name" placeholder="Your Name" required
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
+                       aria-label="Your name">
+                <input type="email" name="email" placeholder="Your Professional Email" required
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
+                       aria-label="Professional email address for HCP registration">
+                <input type="text" name="specialty" placeholder="Your Specialty (e.g., General Practitioner)" required
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
+                       aria-label="Your medical specialty">
+                <button type="submit" class="btn-secondary w-full sm:w-auto">                    
+                    REGISTER AS A VERIFIED HCP
+                </button>
+            </form>
+            <p class="text-sm text-gray-500 mt-4">We will contact you regarding the verification process and next steps.</p>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Frequently Asked Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">What is Elapha?</h3>
+                    <p class="text-gray-600">Elapha is a new telehealth and health networking platform connecting South Africans with verified healthcare professionals for virtual consultations and credible health information.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">How do you verify doctors?</h3>
+                    <p class="text-gray-600">We have a rigorous process that includes verifying HPCSA registration, qualifications, and good standing directly with regulatory bodies. Look for our 'Verified Badge'.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">When will Elapha launch?</h3>
+                    <p class="text-gray-600">We're putting the final touches on the platform and will announce the exact launch date very soon to our waitlist members!</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Is my health data secure?</h3>
+                    <p class="text-gray-600">Absolutely. We use advanced encryption and adhere to strict POPIA compliance standards to protect your privacy and sensitive health information.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">What's the difference between Free and Basic tiers?</h3>
+                    <p class="text-gray-600">Our Free tier lets you browse doctors and view all public health content. The Basic tier, for a small monthly fee, unlocks deeper interaction like commenting on doctor posts and sending limited direct messages.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Can I really get a doctor's consultation online?</h3>
+                    <p class="text-gray-600">Yes, with our Standard and Premium paid tiers, you can schedule and conduct secure video consultations with verified HCPs from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8 text-center rounded-t-lg">
+        <div class="max-w-6xl mx-auto">
+            <!-- Logo in footer - now using an image tag with a placeholder URL -->
+            <a href="#" class="inline-block mb-4">
+                 <img src="YOUR_ACTUAL_LOGO_URL_HERE.png" alt="Elapha Logo" class="h-8 sm:h-10">
+            </a>
+            <p class="text-sm mb-2 text-gray-300">Elapha (Pty) Ltd © 2025 | All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <!-- Social Media Icons - Placeholders with updated colors -->
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=FB" alt="Facebook" class="w-6 h-6 rounded-md">
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=IG" alt="Instagram" class="w-6 h-6 rounded-md">
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=X" alt="X/Twitter" class="w-6 h-6 rounded-md">
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=LI" alt="LinkedIn" class="w-6 h-6 rounded-md">
+                </a>
+            </div>
+            <p class="text-sm mt-4 text-gray-500">Connecting South Africa to Better Health.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for smooth scrolling to sections -->
+    <script>
+        // Ensure the DOM is fully loaded before trying to query elements
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Get the target element using its ID from the href attribute
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    // Only attempt to scroll if the target element exists
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        console.error(`Element with ID '${targetId.substring(1)}' not found.`);
+                    }
+                });
+            });
+
+            // Basic animation for hero section background elements (optional)
+            const styleSheet = document.createElement("style");
+            styleSheet.type = "text/css";
+            styleSheet.innerText = `
+                @keyframes blob {
+                    0% { transform: translate(0, 0) scale(1); }
+                    33% { transform: translate(30px, -50px) scale(1.1); }
+                    66% { transform: translate(-20px, 20px) scale(0.9); }
+                    100% { transform: translate(0, 0) scale(1); }
+                }
+                .animate-blob {
+                    animation: blob 7s infinite cubic-bezier(0.6, 0.4, 0.4, 0.6);
+                }
+                .animation-delay-2000 {
+                    animation-delay: 2s;
+                }
+            `;
+            document.head.appendChild(styleSheet);
+        });
+    </script>
+
+</body>
+</html>
