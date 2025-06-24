@@ -386,7 +386,7 @@
                 Join our waitlist now to get **exclusive launch offers**, behind-the-scenes updates, and be among the first to access verified healthcare professionals and a thriving health community.
             </p>
  <!-- Netlify Form for Patient Waitlist -->
-            <form name="patient-waitlist" method="POST" data-netlify="true" class="space-y-4">
+            <form name="patient-waitlist" method="POST" data-netlify="true" action="/success" class="space-y-4">
                 <!-- Netlify Honeypot for spam prevention -->
                 <input type="hidden" name="form-name" value="patient-waitlist">
                 <input type="hidden" name="bot-field">
@@ -410,7 +410,7 @@
                 Elapha offers a secure, compliant platform to expand your patient reach, elevate your professional presence, and connect with peers. Be among the first to offer verified telehealth services in South Africa.
             </p>
  <!-- Netlify Form for HCP Registration -->
-            <form name="hcp-registration" method="POST" data-netlify="true" class="space-y-4">
+            <form name="hcp-registration" method="POST" data-netlify="true" action="/success" class="space-y-4">
                 <!-- Netlify Honeypot for spam prevention -->
                 <input type="hidden" name="form-name" value="hcp-registration">
                 <input type="hidden" name="bot-field">
