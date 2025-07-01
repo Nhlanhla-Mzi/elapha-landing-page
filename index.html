@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,18 +44,18 @@
         }
         /* Waitlist button, matching logo's yellow */
         .btn-waitlist {
-            background-color: #FFD700; /* Yellow from logo */
-            color: #212121; /* Dark grey text to contrast with yellow button */
-            padding: 1rem 2.5rem;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            font-size: 1.125rem; /* text-lg */
-            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); /* Yellow shadow */
-            transition: background-color 0.3s ease, transform 0.2s ease;
+             background-color: #FFD700; /* Yellow from logo */
+             color: #212121; /* Dark grey text to contrast with yellow button */
+             padding: 1rem 2.5rem;
+             border-radius: 0.75rem;
+             font-weight: 700;
+             font-size: 1.125rem; /* text-lg */
+             box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4); /* Yellow shadow */
+             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .btn-waitlist:hover {
-            background-color: #FFC107; /* Slightly darker yellow on hover */
-            transform: translateY(-2px);
+             background-color: #FFC107; /* Slightly darker yellow on hover */
+             transform: translateY(-2px);
         }
         .card {
             background-color: white;
@@ -63,13 +63,12 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             padding: 1.5rem;
         }
-        /* Custom styles for pricing table headers (overriding default Tailwind for specific elements) */
         .pricing-table-header {
             background-color: #FFD700; /* Yellow background for pricing headers */
             color: #212121; /* Dark grey text for contrast */
             font-weight: 600;
             padding: 0.75rem;
-            border-radius: 0.5rem 0.5rem 0 0; /* Only top corners rounded for headers */
+            border-radius: 0.5rem 0.5rem 0 0;
             text-align: center;
         }
         .pricing-table-cell {
@@ -83,28 +82,6 @@
         /* Keeping check/x icons universal for clarity */
         .icon-check { color: #4CAF50; } 
         .icon-x { color: #EF5350; }
-
-        /* Animation for hero background blobs */
-        @keyframes blob {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-        }
-        .animate-blob {
-            animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9);
-        }
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
     </style>
 </head>
 <body>
@@ -120,7 +97,7 @@
             <div class="space-x-4">
                 <a href="#about" class="text-gray-600 hover:text-gray-900 font-medium">About</a>
                 <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 font-medium">How It Works</a>
-                <a href="#patient-section" class="text-gray-600 hover:text-gray-900 font-medium">Join Waitlist</a>
+                <a href="#waitlist" class="text-gray-600 hover:text-gray-900 font-medium">Join Waitlist</a>
                 <a href="#contact" class="text-gray-600 hover:text-gray-900 font-medium">Contact Us</a>
             </div>
         </div>
@@ -161,12 +138,12 @@
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="card flex flex-col items-center">
-                    <img src="Blurred People.png" alt="Blurred Picture" class="w-20 h-20 mb-4 rounded-lg">
+                    <img src="Blurred People.png" alt="Clock icon" class="w-20 h-20 mb-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-2 text-gray-800">Endless Waiting?</h3>
                     <p class="text-gray-600">Avoid long queues and wasted time at clinics.</p>
                 </div>
                 <div class="card flex flex-col items-center">
-                    <img src="Traffic Jam Jozi.png" alt="Traffic Jam Pic" class="w-20 h-20 mb-4 rounded-lg">
+                    <img src="Traffic Jam Jozi.png" alt="Map icon" class="w-20 h-20 mb-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-2 text-gray-800">Travel Hassles?</h3>
                     <p class="text-gray-600">No more commuting for medical consultations.</p>
                 </div>
@@ -176,7 +153,7 @@
                     <p class="text-gray-600">Separate reliable info from questionable sources.</p>
                 </div>
                 <div class="card flex flex-col items-center">
-                    <img src="Empty Wallet.png" alt="Wallet icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <img src="Empty Wallet.png" alt="Money icon" class="w-20 h-20 mb-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-2 text-gray-800">Healthcare Costs Too High?</h3>
                     <p class="text-gray-600">Access affordable, tiered healthcare solutions.</p>
                 </div>
@@ -184,7 +161,7 @@
         </div>
     </section>
 
-    <!-- Introducing Elapha: The Solution -->
+    <!-- Introducing Elapha: Your Solution -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-yellow-50">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Elapha: Verified Care. Connected Community. Your Health, Empowered.</h2>
@@ -200,89 +177,81 @@
             <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">How Elapha Empowers You</h2>
 
             <!-- A. Trust You Can See: Verified Professionals -->
-            <div class="flex flex-col lg:flex-row items-center gap-8 mb-16 p-6 sm:p-8 rounded-lg shadow-md bg-gray-50">
+            <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Connect with Confidence. Always Verified.</h3>
                     <p class="text-lg text-gray-700 mb-4">
-                        No more guessing. Every doctor, specialist, and healthcare professional on Elapha undergoes a **rigorous, multi-step verification process** to confirm their credentials and HPCSA registration.
+                        No more guessing. Every doctor, specialist, and healthcare professional on Elapha undergoes a rigorous, multi-step verification process to confirm their credentials and HPCSA registration.
                     </p>
                     <p class="text-lg text-gray-700 font-semibold">
                         Look for our distinctive <strong class="text-elapha-dark">'Verified Badge'</strong> – it's your promise of credible, professional care.
                     </p>
                 </div>
                 <div class="lg:w-1/2 flex justify-center">
-                    <img src="HCP Verified Profile.png" alt="HCP Profile with Verified Badge" class="rounded-lg shadow-lg w-full max-w-md border-2 border-yellow-300">
+                    <img src="HCP Verified Profile.png" alt="HCP Profile with Verified Badge" class="rounded-lg shadow-lg w-full max-w-md">
                 </div>
             </div>
 
             <!-- B. Your Health Community: Learn & Engage -->
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16 p-6 sm:p-8 rounded-lg shadow-md bg-yellow-50">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-8 mb-16">
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Knowledge is Power. Conversation is Key.</h3>
                     <p class="text-lg text-gray-700 mb-4">
                         Elapha is more than just appointments; it's a living hub of health insights.
                     </p>
-                    <ul class="text-lg text-gray-700 space-y-4">
+                    <ul class="text-lg text-gray-700 space-y-3">
                         <li class="flex items-start">
-                            <span class="inline-block mr-3 text-elapha-dark font-bold text-2xl mt-1">✓</span>
-                            <div>
-                                <span class="font-bold">Free Tier:</span> Browse and read daily articles, health tips, and Q&As directly from verified medical experts. 'Like' posts to show appreciation and stay informed, all at no cost.
-                            </div>
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Free Tier:</span> Browse and read daily articles, health tips, and Q&As directly from verified medical experts. 'Like' posts to show appreciation and stay informed, all at no cost.
                         </li>
                         <li class="flex items-start">
-                            <span class="inline-block mr-3 text-elapha-dark font-bold text-2xl mt-1">✓</span>
-                            <div>
-                                <span class="font-bold">Basic Tier (Paid - Affordable!):</span> Ready to dive deeper? Upgrade to our Basic tier to <strong class="text-elapha-dark">comment directly on posts</strong>, ask your questions, and participate in discussions with verified HCPs. Get limited direct messaging for non-urgent queries and build a supportive patient-to-patient network. **Engage, don't just consume!**
-                            </div>
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Basic Tier (Paid - Affordable!):</span> Ready to dive deeper? Upgrade to our Basic tier to <strong class="text-elapha-dark">comment directly on posts</strong>, ask your questions, and participate in discussions with verified HCPs. Get limited direct messaging for non-urgent queries and build a supportive patient-to-patient network. Engage, don't just consume!
                         </li>
                     </ul>
                 </div>
                 <div class="lg:w-1/2 flex justify-center">
-                    <img src="Social Feed.png" alt="Social Feed with Comments" class="rounded-lg shadow-lg w-full max-w-md border-2 border-yellow-300">
+                    <img src="Social Feed.png" alt="Social Feed with Comments" class="rounded-lg shadow-lg w-full max-w-md">
                 </div>
             </div>
 
             <!-- C. Convenient Consultations: Care on Your Terms -->
-            <div class="flex flex-col lg:flex-row items-center gap-8 mb-16 p-6 sm:p-8 rounded-lg shadow-md bg-gray-50">
+            <div class="flex flex-col lg:flex-row items-center gap-8 mb-16">
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Quality Care. Without the Wait.</h3>
                     <p class="text-lg text-gray-700 mb-4">
                         When you need direct medical advice, Elapha makes it seamless. Our platform offers secure, high-quality video consultations with verified professionals.
                     </p>
-                    <ul class="text-lg text-gray-700 space-y-4">
+                    <ul class="text-lg text-gray-700 space-y-3">
                         <li class="flex items-start">
-                            <span class="inline-block mr-3 text-elapha-dark font-bold text-2xl mt-1">✓</span>
-                            <div>
-                                <span class="font-bold">Standard Tier (Paid):</span> Get **discounted rates** on virtual consultations and enjoy priority booking.
-                            </div>
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Standard Tier (Paid):</span> Get discounted rates on virtual consultations and enjoy priority booking.
                         </li>
                         <li class="flex items-start">
-                            <span class="inline-block mr-3 text-elapha-dark font-bold text-2xl mt-1">✓</span>
-                            <div>
-                                <span class="font-bold">Premium Tier (Paid):</span> For comprehensive needs, our Premium tier offers **included consultations** each month/quarter, dedicated patient support, and early access to new features. Your health, truly prioritized.
-                            </div>
+                            <span class="inline-block mr-2 text-elapha-dark font-bold text-xl">✓</span>
+                            <span class="font-bold">Premium Tier (Paid):</span> For comprehensive needs, our Premium tier offers included consultations each month/quarter, dedicated patient support, and early access to new features. Your health, truly prioritized.
                         </li>
                     </ul>
                 </div>
                 <div class="lg:w-1/2 flex justify-center">
-                    <img src="verfied Shield Badge.png" alt="Video Consultation Mockup" class="rounded-lg shadow-lg w-full max-w-md border-2 border-yellow-300">
+                    <img src="verfied Shield Badge.png" alt="Video Consultation Mockup" class="rounded-lg shadow-lg w-full max-w-md">
                 </div>
             </div>
 
             <!-- D. Privacy & Security: Your Data, Protected -->
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-8 p-6 sm:p-8 rounded-lg shadow-md bg-yellow-50">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-8">
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Your Health Data. Secure & Private.</h3>
                     <p class="text-lg text-gray-700">
-                        We understand the sensitivity of your health information. Elapha is built with **robust security measures**, including advanced encryption and strict access controls, to ensure your data is always protected and compliant with South Africa's **POPIA**. Your trust is our priority.
+                        We understand the sensitivity of your health information. Elapha is built with robust security measures, including advanced encryption and strict access controls, to ensure your data is always protected and compliant with South Africa's POPIA. Your trust is our priority.
                     </p>
-                    <div class="mt-6 flex items-center justify-start gap-4 text-gray-600">
+                    <div class="mt-4 flex items-center justify-start gap-4 text-gray-600">
                         <img src="Data Protection.png" alt="Lock icon" class="w-16 h-16 rounded-lg">
-                        <span class="text-2xl font-bold text-elapha-dark">POPIA Compliant</span>
+                        <span class="text-xl font-semibold text-elapha-dark">POPIA Compliant</span>
                     </div>
                 </div>
                 <div class="lg:w-1/2 flex justify-center">
-                    <img src="Lock Pin icon.png" alt="Security Graphic" class="rounded-lg shadow-lg w-full max-w-md border-2 border-yellow-300">
+                    <img src="Lock Pin icon.png" alt="Security Graphic" class="rounded-lg shadow-lg w-full max-w-md">
                 </div>
             </div>
         </div>
@@ -294,7 +263,7 @@
             <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Your Journey to Better Health in 3 Simple Steps.</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="card flex flex-col items-center">
-                    <img src="Sign Up Icon.png" alt="Sign up Rocket icon" class="w-20 h-20 mb-4 rounded-lg">
+                    <img src="Sign Up Icon.png" alt="Rocket icon" class="w-20 h-20 mb-4 rounded-lg">
                     <h3 class="text-xl font-semibold mb-2 text-gray-800">1. Join Our Waitlist</h3>
                     <p class="text-gray-600">Sign up now to be among the first to experience Elapha's innovative platform. It’s quick and easy!</p>
                 </div>
@@ -321,82 +290,82 @@
             </p>
 
             <div class="overflow-x-auto">
-                <table class="min-w-full bg-white rounded-lg shadow-xl overflow-hidden divide-y divide-gray-200">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th scope="col" class="py-4 px-4 text-left font-bold text-lg text-gray-800 sticky left-0 bg-gray-100 z-10">TIER</th>
-                            <th scope="col" class="py-4 px-4 pricing-table-header text-lg">FREE (Elapha Explorer)</th>
-                            <th scope="col" class="py-4 px-4 pricing-table-header text-lg">BASIC (Elapha Engager)</th>
-                            <th scope="col" class="py-4 px-4 pricing-table-header text-lg">STANDARD (Elapha Consultant)</th>
-                            <th scope="col" class="py-4 px-4 pricing-table-header text-lg">PREMIUM (Elapha Comprehensive)</th>
+                <table class="min-w-full bg-white rounded-lg shadow-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-gray-100 text-gray-700">
+                            <th class="py-3 px-4 text-left font-semibold">TIER</th>
+                            <th class="py-3 px-4 pricing-table-header">FREE (Elapha Explorer)</th>
+                            <th class="py-3 px-4 pricing-table-header">BASIC (Elapha Engager)</th>
+                            <th class="py-3 px-4 pricing-table-header">STANDARD (Elapha Consultant)</th>
+                            <th class="py-3 px-4 pricing-table-header">PREMIUM (Elapha Comprehensive)</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Monthly Price</td>
+                    <tbody>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Monthly Price</td>
                             <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R0 (Forever Free!)</td>
                             <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R99 / month</td>
                             <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R249 / month</td>
                             <td class="py-3 px-4 pricing-table-cell font-bold text-elapha-dark">R499 / month</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">HCP Profiles</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-2xl">✅</span></td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-2xl">✅</span></td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-2xl">✅</span></td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-2xl">✅</span></td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">HCP Profiles</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span></td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Public Posts</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> View All</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> View All</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> View All</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> View All</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Public Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> View All</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Post Reactions</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> Like Posts</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> Like Posts</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> Like Posts</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> Like Posts</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Post Reactions</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Like Posts</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Commenting</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x text-2xl">❌</span></td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> Comment on HCP Posts</td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> Comment on HCP Posts</td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> Comment on HCP Posts</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Commenting</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Comment on HCP Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Comment on HCP Posts</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Comment on HCP Posts</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Direct Message</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x text-2xl">❌</span></td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> Limited DM to HCPs</td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> Unlimited DM to HCPs</td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> Unlimited DM to HCPs</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Direct Message</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Limited DM to HCPs</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Unlimited DM to HCPs</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Unlimited DM to HCPs</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Consultations</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x text-2xl">❌</span></td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x text-2xl">❌</span></td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> Discounted Virtual Calls</td>
-                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check text-xl">✅</span> [X] Free Consults/Month</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Consultations</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> Discounted Virtual Calls</td>
+                            <td class="py-3 px-4 pricing-table-cell font-semibold text-elapha-dark"><span class="icon-check">✅</span> [X] Free Consults/Month</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Booking</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x text-2xl">❌</span></td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x text-2xl">❌</span></td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> Priority Booking</td>
-                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check text-xl">✅</span> Priority Booking</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Booking</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-x">❌</span></td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Priority Booking</td>
+                            <td class="py-3 px-4 pricing-table-cell"><span class="icon-check">✅</span> Priority Booking</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Support</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Support</td>
                             <td class="py-3 px-4 pricing-table-cell">Basic</td>
                             <td class="py-3 px-4 pricing-table-cell">Basic</td>
                             <td class="py-3 px-4 pricing-table-cell">Standard</td>
                             <td class="py-3 px-4 pricing-table-cell">Dedicated Patient Coordinator</td>
                         </tr>
-                        <tr class="pricing-table-row odd:bg-gray-50">
-                            <td class="py-3 px-4 pricing-table-cell text-left font-medium sticky left-0 bg-white odd:bg-gray-50 z-10">Other</td>
+                        <tr class="pricing-table-row">
+                            <td class="py-3 px-4 pricing-table-cell text-left font-medium">Other</td>
                             <td class="py-3 px-4 pricing-table-cell">Basic Health Resources</td>
                             <td class="py-3 px-4 pricing-table-cell">Ad-Free Experience, Patient Network</td>
                             <td class="py-3 px-4 pricing-table-cell">Enhanced Records</td>
@@ -416,15 +385,15 @@
             <p class="text-lg text-gray-700 mb-8">
                 Join our waitlist now to get **exclusive launch offers**, behind-the-scenes updates, and be among the first to access verified healthcare professionals and a thriving health community.
             </p>
-<!-- Netlify Form for Patient Waitlist -->
+ <!-- Netlify Form for Patient Waitlist -->
             <form name="patient-waitlist" method="POST" data-netlify="true" action="/success" class="space-y-4">
                 <!-- Netlify Honeypot for spam prevention -->
                 <input type="hidden" name="form-name" value="patient-waitlist">
                 <input type="hidden" name="bot-field">
 
                 <input type="email" name="email" placeholder="Your Email Address" required
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
-                        aria-label="Email address for waitlist">
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
+                       aria-label="Email address for waitlist">
                 <button type="submit" class="btn-waitlist w-full sm:w-auto">                    
                     JOIN THE PATIENT WAITLIST NOW!
                 </button>
@@ -440,21 +409,21 @@
             <p class="text-lg text-gray-700 mb-8">
                 Elapha offers a secure, compliant platform to expand your patient reach, elevate your professional presence, and connect with peers. Be among the first to offer verified telehealth services in South Africa.
             </p>
-<!-- Netlify Form for HCP Registration -->
-            <form name="hcp-registration" method="POST" data-netlify="true" action="/success" class="space-y-4">
-                <!-- Netlify Honeypot for spam prevention -->
+ <!-- Netlify Form for HCP Registration -->
+<form name="hcp-registration" method="POST" data-netlify="true" action="/submission-successful-professional.html" class="space-y-4">
+                    <!-- Netlify Honeypot for spam prevention -->
                 <input type="hidden" name="form-name" value="hcp-registration">
                 <input type="hidden" name="bot-field">
 
                 <input type="text" name="name" placeholder="Your Name" required
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
-                        aria-label="Your name">
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
+                       aria-label="Your name">
                 <input type="email" name="email" placeholder="Your Professional Email" required
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
-                        aria-label="Professional email address for HCP registration">
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
+                       aria-label="Professional email address for HCP registration">
                 <input type="text" name="specialty" placeholder="Your Specialty (e.g., General Practitioner)" required
-                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
-                        aria-label="Your medical specialty">
+                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-200"
+                       aria-label="Your medical specialty">
                 <button type="submit" class="btn-secondary w-full sm:w-auto">                    
                     REGISTER AS A VERIFIED HCP
                 </button>
@@ -490,52 +459,87 @@
                     <p class="text-gray-600">Our Free tier lets you browse doctors and view all public health content. The Basic tier, for a small monthly fee, unlocks deeper interaction like commenting on doctor posts and sending limited direct messages.</p>
                 </div>
                 <div class="card">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Can I directly consult with HCPs through Elapha?</h3>
-                    <p class="text-gray-600">Yes, our Standard and Premium tiers offer secure virtual consultations with verified healthcare professionals. You can book appointments directly through the platform.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Can I really get a doctor's consultation online?</h3>
+                    <p class="text-gray-600">Yes, with our Standard and Premium paid tiers, you can schedule and conduct secure video consultations with verified HCPs from anywhere.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-100 to-yellow-50">
-        <div class="max-w-3xl mx-auto text-center card p-6 sm:p-8">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Have Questions? Get In Touch!</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                We're here to help. Whether you're a patient, an HCP, or just curious about Elapha, feel free to reach out.
-            </p>
-            <form name="contact" method="POST" data-netlify="true" action="/success" class="space-y-4">
-                <input type="hidden" name="form-name" value="contact">
-                <input type="hidden" name="bot-field">
-
-                <input type="text" name="name" placeholder="Your Name" required
-                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
-                       aria-label="Your name for contact form">
-                <input type="email" name="email" placeholder="Your Email Address" required
-                       class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
-                       aria-label="Your email for contact form">
-                <textarea name="message" placeholder="Your Message" rows="5" required
-                          class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
-                          aria-label="Your message"></textarea>
-                <button type="submit" class="btn-primary w-full sm:w-auto">
-                    SEND MESSAGE
-                </button>
-            </form>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8 text-center">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <div class="mb-4 sm:mb-0">
-                <p>&copy; 2025 Elapha. All rights reserved.</p>
+    <footer id="contact" class="bg-gray-800 text-white py-8 px-4 sm:px-6 lg:px-8 text-center rounded-t-lg">
+        <div class="max-w-6xl mx-auto">
+            <!-- Logo in footer - now using an image tag with a placeholder URL -->
+            <a href="#" class="inline-block mb-4">
+                 <img src="logo-png Elapha".png" alt="Elapha Logo" class="h-8 sm:h-10">
+            </a>
+            <p class="text-sm mb-2 text-gray-300">Elapha (Pty) Ltd © 2025 | All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <span class="text-gray-500">|</span>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
             </div>
-            <div class="flex space-x-6">
-                <a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a>
-                <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+            <div class="flex justify-center space-x-6">
+                <!-- Social Media Icons - Placeholders with updated colors -->
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=FB" alt="Facebook" class="w-6 h-6 rounded-md">
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=IG" alt="Instagram" class="w-6 h-6 rounded-md">
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=X" alt="X/Twitter" class="w-6 h-6 rounded-md">
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <img src="https://placehold.co/24x24/FFD700/212121?text=LI" alt="LinkedIn" class="w-6 h-6 rounded-md">
+                </a>
             </div>
+            <p class="text-sm mt-4 text-gray-500">Connecting South Africa to Better Health.</p>
         </div>
     </footer>
+
+    <!-- Simple JavaScript for smooth scrolling to sections -->
+    <script>
+        // Ensure the DOM is fully loaded before trying to query elements
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Get the target element using its ID from the href attribute
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    // Only attempt to scroll if the target element exists
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        console.error(`Element with ID '${targetId.substring(1)}' not found.`);
+                    }
+                });
+            });
+
+            // Basic animation for hero section background elements (optional)
+            const styleSheet = document.createElement("style");
+            styleSheet.type = "text/css";
+            styleSheet.innerText = `
+                @keyframes blob {
+                    0% { transform: translate(0, 0) scale(1); }
+                    33% { transform: translate(30px, -50px) scale(1.1); }
+                    66% { transform: translate(-20px, 20px) scale(0.9); }
+                    100% { transform: translate(0, 0) scale(1); }
+                }
+                .animate-blob {
+                    animation: blob 7s infinite cubic-bezier(0.6, 0.4, 0.4, 0.6);
+                }
+                .animation-delay-2000 {
+                    animation-delay: 2s;
+                }
+            `;
+            document.head.appendChild(styleSheet);
+        });
+    </script>
 
 </body>
 </html>
